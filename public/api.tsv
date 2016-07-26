@@ -1,0 +1,108 @@
+User Profile			
+	GET	users/me	Show user's own profile
+	PUT	users/me	Update user's own profile
+	GET	users/{user}	Show another user's public profile
+			
+User Site Membership			
+	GET	users/me/sites	List user's own sites
+	GET	users/{user}/sites	List public sites for another user
+			
+User Messages			
+	GET	users/me/messages	Get user's own inbox
+	POST	users/me/messages	Send a message from user
+	GET	users/me/messages/{message}	Show a message
+	DELETE	users/me/messages/{message}	Delete a message
+			
+Sites			
+	GET	sites	List public sites
+	POST	sites	Create new site (limited)
+	GET	sites/{site}	Show site profile
+	PUT	sites/{site}	Update site profile
+			
+Site Membership Types			
+	GET	sites/{site}/memberships	List site membership types
+	POST	sites/{site}/memberships	Add site membership types
+	GET	sites/{site}/memberships/{membership}	Show site membership type
+	PUT	sites/{site}/memberships/{membership}	Update site membership type
+			
+Site Membership			
+	GET	sites/{site}/members	List site members
+	POST	sites/{site}/members	Add site member (must accept invitation)
+	GET	sites/{site}/members/{user}	Show a user's site membership
+	PUT	sites/{site}/members/{user}	Update a user's site membership
+	DELETE	sites/{site}/members/{user}	Remove a user from a site
+			
+Site Groups			
+	GET	sites/{site}/groups	List groups for site
+	POST	sites/{site}/groups	Create group for site
+	GET	sites/{site}/groups/{group}	Show a group
+	PUT	sites/{site}/groups/{group}	Update a group
+	DELETE	sites/{site}/groups/{group}	Delete a group
+			
+Site Group Membership			
+	GET	sites/{site}/groups/{group}/members	List members of a group
+	POST	sites/{site}/groups/{group}/members	Add members to group (must be site members)
+	GET	sites/{site}/groups/{group}/members/{user}	Show a user's group membership
+	PUT	sites/{site}/groups/{group}/members/{user}	Update a user's group membership
+	DELETE	sites/{site}/groups/{group}/members/{user}	Remove a user from a group
+			
+Site Pages			
+	GET	sites/{site}/pages	List pages for site
+	POST	sites/{site}/pages	Add page to site
+	GET	sites/{site}/pages/{page}	Show a page
+	PUT	sites/{site}/pages/{page}	Update a page
+	DELETE	sites/{site}/pages/{page}	Delete a page
+			
+Site Calendars			
+	GET	sites/{site}/calendars	List calendars for site
+	POST	sites/{site}/calendars	Add calendar to site
+	GET	sites/{site}/calendars/{calendar}	Show a calendar
+	PUT	sites/{site}/calendars/{calendar}	Update a calendar
+	DELETE	sites/{site}/calendars/{calendar}	Delete a calendar
+			
+Site Calendar Events			
+	GET	sites/{site}/calendars/{calendar}/events	List events for calendar
+	POST	sites/{site}/calendars/{calendar}/events	Add event to calendar
+	GET	sites/{site}/calendars/{calendar}/events/{event}	Show an event
+	PUT	sites/{site}/calendars/{calendar}/events/{event}	Update an event
+	DELETE	sites/{site}/calendars/{calendar}/events/{event}	Delete an event
+			
+			
+			
+			
+			
+Custom Fields			
+	GET	sites/{site}/fields	List custom fields for site
+	POST	sites/{site}/fields	Add custom field to site
+	GET	sites/{site}/fields/{field}	Show a custom field
+	PUT	sites/{site}/fields/{field}	Update a custom field
+	DELETE	sites/{site}/fields/{field}	Delete a custom field
+			
+Custom Field Entities (by Field)			
+	GET	sites/{site}/fields/{field}/entities	List entities using a field
+	POST	sites/{site}/fields/{field}/entities	Add entity to a field
+			
+Custom Field Entities (by Entity)			
+	GET	sites/{site}/entities/{entity}/fields	List fields for an entity
+	POST	sites/{site}/entities/{entity}/fields	Add field to an entity
+	GET	sites/{site}/entities/{entity}/fields/{field}	Show a field entity
+	PUT	sites/{site}/entities/{entity}/fields/{field}	Update a field entity
+	DELETE	sites/{site}/entities/{entity}/fields/{field}	Delete a field from an entity
+			
+Site Fees			
+	GET	sites/{site}/fees	List custom fees for site
+	POST	sites/{site}/fees	Add custom fee to site
+	GET	sites/{site}/fees/{fee}	Show a custom fee
+	PUT	sites/{site}/fees/{fee}	Update a custom fee
+	DELETE	sites/{site}/fees/{fee}	Delete a custom fee
+			
+Site Member Fees (by Fee)			
+	GET	sites/{site}/fees/{fee}/members	List users for a fee
+	POST	sites/{site}/fees/{fee}/members	Add user to a fee
+			
+Site Member Fees (by Member)			
+	GET	sites/{site}/members/{user}/fees	List fees for a user
+	POST	sites/{site}/members/{user}/fees	Add fee to a user
+	GET	sites/{site}/members/{user}/fees/{fee}	Show a user's fee
+	PUT	sites/{site}/members/{user}/fees/{fee}	Update a user's fee
+	DELETE	sites/{site}/members/{user}/fees/{fee}	Delete a fee from a user
